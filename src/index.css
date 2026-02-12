@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles */
+body {
+    background-color: #f1f5f9;
+}
+
+.map-container {
+    height: 500px;
+    width: 100%;
+    border-radius: 0.75rem;
+    z-index: 10;
+    position: relative;
+}
+
+.chart-bar {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chart-bar:hover {
+    transform: scaleY(1.02);
+    filter: brightness(1.1);
+}
+
+/* Animations removed for stability */
+
+/* Custom Scrollbar */
+.custom-scroll::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.pie-slice {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+.pie-slice:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+    stroke: #fff;
+    stroke-width: 0.02px;
+}
+
+.pie-text {
+    pointer-events: none;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    font-weight: 800;
+    fill: white;
+    font-size: 0.08px;
+}
