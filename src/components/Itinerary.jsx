@@ -1,8 +1,6 @@
 
 import React from 'react';
 import { MapPin, Camera, Utensils, Car, Star } from 'lucide-react';
-import Infographic from './Infographic';
-import essentialInfoImg from '../assets/barcelona-essential-infographic.jpg';
 import { useLanguage } from '../context/LanguageContext';
 
 const DayPlan = ({ day, title, items, isExcursion }) => {
@@ -125,7 +123,6 @@ const Itinerary = () => {
             <h1 className="text-4xl font-black text-slate-800 mb-2">{t('itinerary.title')}</h1>
             <p className="text-xl text-slate-500 mb-8 font-light">Una ruta diseñada para mezclar los monumentos icónicos con la mejor gastronomía y escapadas.</p>
 
-            <Infographic src={essentialInfoImg} alt="Barcelona Esencial Infografia" title={t('infographic.essential')} />
 
             {days.map(d => <DayPlan key={d.day} {...d} />)}
 

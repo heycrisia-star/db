@@ -1,145 +1,4852 @@
-
 export const RESTAURANTS = {
-  es: [
-    { name: "7 Portes", style: "Arroces Históricos", rating: "4.2 (16k res.)", price: "50-70€", desc: "Fundado en 1836. Famoso por la \"Paella Parellada\". Picasso era cliente." },
-    { name: "Botafumeiro", style: "Marisco Gallego", rating: "4.4 (7k res.)", price: "80-150€", desc: "Institución del marisco. Visitado por presidentes y celebridades (Woody Allen, Beyoncé)." },
-    { name: "Cal Pep", style: "Tapas de Mercado", rating: "4.4 (1.8k res.)", price: "50-70€", desc: "Top 50 Best Discovery. Citado mundialmente como la barra de tapas perfecta." },
-    { name: "El Xampanyet", style: "Bodega / Tapas", rating: "4.7 (5.8k res.)", price: "25-35€", desc: "Icono del Born. Famoso por sus anchoas y su vino espumoso propio." },
-    { name: "Ciudad Condal", style: "Tapas Clásicas", rating: "4.6 (18k res.)", price: "30-45€", desc: "Rey de las reseñas. Probablemente el bar de tapas más popular entre turistas y locales." },
-    { name: "Tapeo", style: "Tapas Modernas", rating: "4.5 (3k res.)", price: "35-50€", desc: "Dirigido por Daniel Rueda. Tapas tradicionales con técnica de alta cocina (ej. Costilla con miel)." },
-    { name: "Mantequerías Pirenaicas", style: "Tortillas / Desayunos", rating: "4.4 (1.2k res.)", price: "15-25€", desc: "Fama Viral: Considerada por muchos la mejor tortilla de patatas de BCN (con cebolla)." },
-    { name: "La Tortilla Castiza", style: "Tortillas", rating: "4.8 (300 res.)", price: "15-20€", desc: "Especialistas en tortilla estilo madrileño (poco cuajada). Puntuación casi perfecta." },
-    { name: "Senyor Vermut", style: "Vermutería", rating: "4.5 (1.5k res.)", price: "20-30€", desc: "Famoso por tener unas de las mejores Bravas de la ciudad (muy picantes)." },
-    { name: "Bormuth", style: "Tapas / Vermut", rating: "4.3 (3.5k res.)", price: "20-30€", desc: "Ambiente joven en el Born. Ideal para tapeo rápido y vermut artesano." },
-    { name: "Rest. Gallego Can Lampazas", style: "Gallego", rating: "4.4 (500 res.)", price: "40-55€", desc: "Pulpo a feira y carnes gallegas. Clásico para comidas de negocios." },
-    { name: "Telefèric Restaurant", style: "Pinchos / Tapas", rating: "4.4 (2k res.)", price: "30-45€", desc: "Estilo San Sebastián. Muy popular por su carro de pintxos y presentación visual." },
-    { name: "La Bonaigua", style: "Catalana / Brasa", rating: "4.2 (1k res.)", price: "20-30€", desc: "Cocina casera de barrio, honesta y sin pretensiones. Menú de mediodía potente." },
-    { name: "Casa Petra", style: "Mediterránea", rating: "4.3 (500 res.)", price: "30-40€", desc: "Local acogedor y polivalente, buena relación calidad-precio en zona alta." },
-    { name: "Dos Pebrots", style: "Histórica / I+D", rating: "4.6 (1.2k res.)", price: "60-80€", desc: "Top 20 World (Food & Wine). Ex-jefes de elBulli. Recuperan recetas de la antigua Roma y Egipto." },
-    { name: "Restaurante Coure", style: "Bistronomía", rating: "4.6 (1.1k res.)", price: "45-60€", desc: "Bib Gourmand Michelin. Famoso por su croqueta, considerada la mejor de BCN por años." },
-    { name: "La Taverna del Clínic", style: "Tapas Gourmet", rating: "4.5 (1.7k res.)", price: "60-80€", desc: "Guía Michelin. Manejan producto de lujo (Caviar, Trufa) en formato informal. Bodega premiada." },
-    { name: "Restaurante Sintonia", style: "Autor / Brasa", rating: "4.6 (500 res.)", price: "40-60€", desc: "Ambiente speakeasy elegante. Famoso por su \"Croissant ahumado\" y steak tartar." },
-    { name: "Restaurante Informal", style: "Alta Cocina Catalana", rating: "4.5 (400 res.)", price: "50-70€", desc: "Dirigido por Marc Gascons (1 Estrella Michelin). Cocina catalana refinada en hotel de lujo." },
-    { name: "Rua Taverna", style: "Gastro-bar", rating: "4.7 (300 res.)", price: "35-50€", desc: "Joya escondida en Gràcia. Creatividad altísima en formato tapa." },
-    { name: "Suca'l Rosselló", style: "Mediterránea", rating: "4.4 (300 res.)", price: "30-45€", desc: "Cocina de mercado bien ejecutada, ideal para cenas tranquilas." },
-    { name: "Sartoria Panatieri", style: "Pizza Orgánica", rating: "4.4 (2.3k res.)", price: "30-45€", desc: "Mejor Pizzería de Europa 2023 y Top 3 Mundial. Hacen sus propios embutidos." },
-    { name: "Xemei", style: "Veneciano", rating: "4.1 (1.8k res.)", price: "40-60€", desc: "Culto. Los gemelos Colombo. Anthony Bourdain lo visitó y adoró. Cocina veneciana (no típica pasta/pizza)." },
-    { name: "Murivecchi", style: "Napolitano", rating: "4.4 (1.5k res.)", price: "25-35€", desc: "Clásico cerca del Born. Pizza napolitana al horno de leña muy fiable." },
-    { name: "Le Cucine Mandarosso", style: "Italiano Casero", rating: "4.4 (1.2k res.)", price: "25-35€", desc: "Cerca del Palau de la Música. Famoso por sus pastas frescas y ambiente íntimo." },
-    { name: "Ostaia", style: "Liguria / Genovés", rating: "4.5 (200 res.)", price: "30-40€", desc: "Especialistas en Pesto Genovés auténtico y pastas frescas de Liguria." },
-    { name: "L'osteria del Contadino", style: "Italiano", rating: "4.4 (400 res.)", price: "25-35€", desc: "Pequeño, romántico y colorido. Platos de pasta muy visuales." },
-    { name: "Rest. Don Corleone", style: "Trattoria", rating: "3.8 (variable)", price: "20-30€", desc: "Más enfocado a perfil turístico/casual." },
-    { name: "Bella Italia", style: "Pizzería", rating: "4.5 (1.5k res.)", price: "20-30€", desc: "Pizza napolitana popular y accesible." },
-    { name: "Oaxaca Cuina Mexicana", style: "Tradicional / Mezcal", rating: "4.3 (1.5k res.)", price: "45-60€", desc: "Recomendado Michelin. Cocina ancestral. Tiene una de las mayores colecciones de Mezcal de Europa." },
-    { name: "Xuba Tacos", style: "Tacos Chef", rating: "4.6 (900 res.)", price: "15-25€", desc: "Creado por chef 2 Estrellas Michelin (Antonio Sáez). Tortillas de maíz azul hechas al momento." },
-    { name: "El Pachuco", style: "Street Food", rating: "4.6 (2.5k res.)", price: "15-20€", desc: "Famosísimos Nachos. Siempre hay cola. Ambiente canalla y ruidoso." },
-    { name: "La Cocina de Graciela", style: "Casero", rating: "4.5 (800 res.)", price: "20-30€", desc: "Auténtico sabor de hogar mexicano. Cochinita pibil muy destacada." },
-    { name: "El Rincón Maya", style: "Yucateco", rating: "4.6 (600 res.)", price: "20-30€", desc: "Especialistas en cocina de Yucatán. Ambiente familiar y colorido." },
-    { name: "La Güerita Mexicana", style: "Taquería", rating: "4.4 (variable)", price: "20-30€", desc: "Tacos bien ejecutados y ambiente festivo." },
-    { name: "San Taco", style: "Tacos", rating: "4.5 (variable)", price: "15-25€", desc: "Opción sólida para antojo de tacos." },
-    { name: "Chamako", style: "Tex-Mex / Fiesta", rating: "4.2 (800 res.)", price: "20-30€", desc: "Tacos y cócteles. Ambiente muy enfocado a grupos y diversión." },
-    { name: "Rosa Negra", style: "Mexicano Comercial", rating: "4.2 (5k res.)", price: "20-25€", desc: "Muy barato y ruidoso. Famoso por mojitos y margaritas económicos." },
-    { name: "Azul Frida", style: "Mexicano", rating: "4.1 (variable)", price: "20-30€", desc: "Inspiración en Frida Kahlo, cocina correcta." },
-    { name: "Fat Veggies", style: "Ahumados / Veggie", rating: "4.6 (500 res.)", price: "30-40€", desc: "De los creadores de Fat Barbies. Todo se pasa por humo/brasa. Sorprendente aunque no seas vegetariano." },
-    { name: "Restaurante Martínez", style: "Arroces / Brasas", rating: "4.2 (4k res.)", price: "50-65€", desc: "Las Vistas. Situado en Montjuïc. Arroces y chuletones con vistas al puerto." },
-    { name: "La Real Hamburguesería", style: "Burgers Gourmet", rating: "4.5 (1.5k res.)", price: "15-25€", desc: "Ganadores de varios concursos locales de hamburguesas. Estilo americano clásico." },
-    { name: "Bar Torpedo", style: "Bocadillos Gourmet", rating: "4.4 (800 res.)", price: "20-30€", desc: "Del chef de Bar Mut. Bocadillos de nivel estrella Michelin, rock & roll y copas." },
-    { name: "El Raconet Charrua", style: "Uruguayo", rating: "4.6 (500 res.)", price: "25-40€", desc: "Carne uruguaya a la parrilla y chivitos. Muy auténtico." },
-    { name: "The Box", style: "Hot Dogs / Ron", rating: "4.7 (800 res.)", price: "15-25€", desc: "Salchichas caseras y rones infusionados por ellos mismos. Pequeño y divertido." },
-    { name: "Oriol Balaguer", style: "Pastelería", rating: "4.4 (variable)", price: "5-15€", desc: "Mejor Croissant de España (2014) y Mejor Panettone. Uno de los mejores pasteleros del mundo." },
-    { name: "Paral·lelo", style: "Heladería", rating: "4.7 (1k res.)", price: "4-10€", desc: "Premios a mejor helado. Hacen todo desde cero (incluso tuestan sus pistachos). Sabores muy locos." },
-    { name: "Zenith", style: "Brunch", rating: "4.5 (3k res.)", price: "15-25€", desc: "\"All day brunch\". Muy instagrameable. Pancakes y huevos benedict. Suele haber cola." },
-    { name: "Honest Greens", style: "Saludable", rating: "4.5 (variable)", price: "15-20€", desc: "Cadena de comida \"real\", rápida y sana. Muy de moda ahora mismo." },
-    { name: "LOT Roasters", style: "Café / Brunch", rating: "4.7 (300 res.)", price: "10-20€", desc: "Tuestan su propio café. Calidad de barista muy alta." },
-    { name: "Churrería Manchega", style: "Churros", rating: "4.4 (variable)", price: "5-10€", desc: "Clásico para chocolate con churros." },
-    { name: "La Caravana", style: "Kebab Sirio", rating: "4.6 (1k res.)", price: "10-15€", desc: "No es un kebab normal. Carne marinada de verdad y salsas caseras." },
-    { name: "Observatorio Fabra", style: "\"Cena con Estrellas\"", rating: "4.6 (1.5k res.)", price: "80-100€", desc: "Experiencia Única. Cenas en verano al aire libre en el observatorio astronómico con vistas a toda BCN." },
-    { name: "Mirablau", style: "Bar / Vistas", rating: "4.2 (3.5k res.)", price: "15-30€", desc: "Al final del Tibidabo. Se va por las vistas panorámicas de la ciudad." },
-    { name: "Restaurante Mirabé", style: "Mediterránea", rating: "4.0 (1.5k res.)", price: "40-50€", desc: "Al lado del Mirablau, más enfocado a cena sentada con vistas." },
-    { name: "Prineu en boca Barcelona", style: "Mediterránea", rating: "4.6 (1.4k res.)", price: "20-30€", desc: "Es carniceria y tienen su propio restaurante, especial para carnes y viceras." },
-    { name: "Restaurante Shunka", style: "Restaurante Japonés", rating: "4.6 (2.4k res.)", price: "35-60€", desc: "Es uno de los restaurantes japoneses más destacados de Barcelona, bien valorado por su sushi, sashimi y cocina japonesa tradicional y creativa." },
-    { name: "Carlota Akaneya", style: "Restaurante Japonés", rating: "4.7 (3.4k res.)", price: "100-120€", desc: "Es un restaurante japonés especializado en sumibiyaki —una barbacoa tradicional japonesa con carbón vegetal donde cada mesa tiene su propia parrilla y tú cocinas tu comida en ella— 🥩🔥. Fue el primero de Europa en introducir este concepto y se inspira en un local clásico de Kioto." },
-    { name: "Robata | Restaurante Japonés Barcelona", style: "Restaurante Japonés", rating: "4.5 (8.2k res.)", price: "35-60€", desc: "Es un restaurante japonés moderno que combina sushi tradicional con la técnica de robata (la parrilla japonesa a la brasa de carbón), creando una carta que fusiona sabores clásicos japoneses con toques mediterráneos e internacionales." },
-    { name: "Kamikaze", style: "Restaurante Alta Cocina", rating: "4.3 (0.5k res.)", price: "80-100€", desc: "El proyecto está liderado por Enric Buendía, un chef catalán formado en restaurantes de alta cocina como Mugaritz y Disfrutar — este último considerado uno de los mejores del mundo." },
-    { name: "Disfrutar", style: "Restaurante Alta Cocina", rating: "4.8 (4k res.)", price: ">100€", desc: "Restaurante de alta gastronomía en Barcelona, con 3 estrellas Michelin y considerado uno de los mejores del mundo por The World's 50 Best Restaurants." },
-    { name: "Paradiso", style: "Cocteles", rating: "4.3 (7k res.)", price: "10-30€", desc: "Coctelería legendaria de Barcelona con entrada \"secreta\" tras una nevera, World's 50 Best Bars Top-10, experiencia sensorial y cócteles artísticos que reinventan la mixología." },
-    { name: "Sips", style: "Cocteles", rating: "4.0 (1.6k res.)", price: "10-30€", desc: "Coctelería de autor reconocida internacionalmente, elegante y con propuestas creativas." },
-    { name: "Feroz Barcelona", style: "Restaurante Nocturno", rating: "4.1 (3.3k res.)", price: "40-80€", desc: "Restaurante + coctelería con estilo sofisticado, ambiente nocturno y cocina de mercado." },
-    { name: "Sagardi", style: "Autor / Brasa", rating: "4.4 (4k res.)", price: "25-45€", desc: "Clásico de cocina vasca en Barcelona con pintxos, carnes y tradición gastronómica." },
-    { name: "Come by Paco Méndez", style: "Mexicano", rating: "4.5 (0.7k res.)", price: ">100€", desc: "Cocina mexicana contemporánea con toque creativo y platos de alta calidad." },
-    { name: "Parking Pizza", style: "Pizzas", rating: "4.4 (8k res.)", price: "20-30€", desc: "Una de las pizzas artesanales más valoradas de Barcelona, masa fermentada y ingredientes auténticos." },
-    { name: "Can Culleretes", style: "Catalana", rating: "4.3 (6.6k res.)", price: "25-40€", desc: "El restaurante más antiguo de Barcelona (desde 1786), tradición y clásicos catalanes." },
-    { name: "Casa Leopoldo", style: "Catalana", rating: "4.7 (0.7k res.)", price: "40-70€", desc: "Cocina catalana evolucionada en un entorno elegante con legado histórico." }
+  "es": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k res.)",
+      "price": "50-70€",
+      "desc": "Fundado en 1836. Famoso por la \"Paella Parellada\". Picasso era cliente."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k res.)",
+      "price": "80-150€",
+      "desc": "Institución del marisco. Visitado por presidentes y celebridades (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k res.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Citado mundialmente como la barra de tapas perfecta."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k res.)",
+      "price": "25-35€",
+      "desc": "Icono del Born. Famoso por sus anchoas y su vino espumoso propio."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k res.)",
+      "price": "30-45€",
+      "desc": "Rey de las reseñas. Probablemente el bar de tapas más popular entre turistas y locales."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k res.)",
+      "price": "35-50€",
+      "desc": "Dirigido por Daniel Rueda. Tapas tradicionales con técnica de alta cocina (ej. Costilla con miel)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k res.)",
+      "price": "15-25€",
+      "desc": "Fama Viral: Considerada por muchos la mejor tortilla de patatas de BCN (con cebolla)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 res.)",
+      "price": "15-20€",
+      "desc": "Especialistas en tortilla estilo madrileño (poco cuajada). Puntuación casi perfecta."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k res.)",
+      "price": "20-30€",
+      "desc": "Famoso por tener unas de las mejores Bravas de la ciudad (muy picantes)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k res.)",
+      "price": "20-30€",
+      "desc": "Ambiente joven en el Born. Ideal para tapeo rápido y vermut artesano."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 res.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira y carnes gallegas. Clásico para comidas de negocios."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k res.)",
+      "price": "30-45€",
+      "desc": "Estilo San Sebastián. Muy popular por su carro de pintxos y presentación visual."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k res.)",
+      "price": "20-30€",
+      "desc": "Cocina casera de barrio, honesta y sin pretensiones. Menú de mediodía potente."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 res.)",
+      "price": "30-40€",
+      "desc": "Local acogedor y polivalente, buena relación calidad-precio en zona alta."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k res.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Ex-jefes de elBulli. Recuperan recetas de la antigua Roma y Egipto."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k res.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famoso por su croqueta, considerada la mejor de BCN por años."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k res.)",
+      "price": "60-80€",
+      "desc": "Guía Michelin. Manejan producto de lujo (Caviar, Trufa) en formato informal. Bodega premiada."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 res.)",
+      "price": "40-60€",
+      "desc": "Ambiente speakeasy elegante. Famoso por su \"Croissant ahumado\" y steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 res.)",
+      "price": "50-70€",
+      "desc": "Dirigido por Marc Gascons (1 Estrella Michelin). Cocina catalana refinada en hotel de lujo."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 res.)",
+      "price": "35-50€",
+      "desc": "Joya escondida en Gràcia. Creatividad altísima en formato tapa."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 res.)",
+      "price": "30-45€",
+      "desc": "Cocina de mercado bien ejecutada, ideal para cenas tranquilas."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k res.)",
+      "price": "30-45€",
+      "desc": "Mejor Pizzería de Europa 2023 y Top 3 Mundial. Hacen sus propios embutidos."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k res.)",
+      "price": "40-60€",
+      "desc": "Culto. Los gemelos Colombo. Anthony Bourdain lo visitó y adoró. Cocina veneciana (no típica pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k res.)",
+      "price": "25-35€",
+      "desc": "Clásico cerca del Born. Pizza napolitana al horno de leña muy fiable."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k res.)",
+      "price": "25-35€",
+      "desc": "Cerca del Palau de la Música. Famoso por sus pastas frescas y ambiente íntimo."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 res.)",
+      "price": "30-40€",
+      "desc": "Especialistas en Pesto Genovés auténtico y pastas frescas de Liguria."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 res.)",
+      "price": "25-35€",
+      "desc": "Pequeño, romántico y colorido. Platos de pasta muy visuales."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "Más enfocado a perfil turístico/casual."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k res.)",
+      "price": "20-30€",
+      "desc": "Pizza napolitana popular y accesible."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k res.)",
+      "price": "45-60€",
+      "desc": "Recomendado Michelin. Cocina ancestral. Tiene una de las mayores colecciones de Mezcal de Europa."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 res.)",
+      "price": "15-25€",
+      "desc": "Creado por chef 2 Estrellas Michelin (Antonio Sáez). Tortillas de maíz azul hechas al momento."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k res.)",
+      "price": "15-20€",
+      "desc": "Famosísimos Nachos. Siempre hay cola. Ambiente canalla y ruidoso."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 res.)",
+      "price": "20-30€",
+      "desc": "Auténtico sabor de hogar mexicano. Cochinita pibil muy destacada."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 res.)",
+      "price": "20-30€",
+      "desc": "Especialistas en cocina de Yucatán. Ambiente familiar y colorido."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Tacos bien ejecutados y ambiente festivo."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Opción sólida para antojo de tacos."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 res.)",
+      "price": "20-30€",
+      "desc": "Tacos y cócteles. Ambiente muy enfocado a grupos y diversión."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k res.)",
+      "price": "20-25€",
+      "desc": "Muy barato y ruidoso. Famoso por mojitos y margaritas económicos."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspiración en Frida Kahlo, cocina correcta."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 res.)",
+      "price": "30-40€",
+      "desc": "De los creadores de Fat Barbies. Todo se pasa por humo/brasa. Sorprendente aunque no seas vegetariano."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k res.)",
+      "price": "50-65€",
+      "desc": "Las Vistas. Situado en Montjuïc. Arroces y chuletones con vistas al puerto."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k res.)",
+      "price": "15-25€",
+      "desc": "Ganadores de varios concursos locales de hamburguesas. Estilo americano clásico."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 res.)",
+      "price": "20-30€",
+      "desc": "Del chef de Bar Mut. Bocadillos de nivel estrella Michelin, rock & roll y copas."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 res.)",
+      "price": "25-40€",
+      "desc": "Carne uruguaya a la parrilla y chivitos. Muy auténtico."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 res.)",
+      "price": "15-25€",
+      "desc": "Salchichas caseras y rones infusionados por ellos mismos. Pequeño y divertido."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Mejor Croissant de España (2014) y Mejor Panettone. Uno de los mejores pasteleros del mundo."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k res.)",
+      "price": "4-10€",
+      "desc": "Premios a mejor helado. Hacen todo desde cero (incluso tuestan sus pistachos). Sabores muy locos."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k res.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Muy instagrameable. Pancakes y huevos benedict. Suele haber cola."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "Cadena de comida \"real\", rápida y sana. Muy de moda ahora mismo."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 res.)",
+      "price": "10-20€",
+      "desc": "Tuestan su propio café. Calidad de barista muy alta."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Clásico para chocolate con churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k res.)",
+      "price": "10-15€",
+      "desc": "No es un kebab normal. Carne marinada de verdad y salsas caseras."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k res.)",
+      "price": "80-100€",
+      "desc": "Experiencia Única. Cenas en verano al aire libre en el observatorio astronómico con vistas a toda BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k res.)",
+      "price": "15-30€",
+      "desc": "Al final del Tibidabo. Se va por las vistas panorámicas de la ciudad."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k res.)",
+      "price": "40-50€",
+      "desc": "Al lado del Mirablau, más enfocado a cena sentada con vistas."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k res.)",
+      "price": "20-30€",
+      "desc": "Es carniceria y tienen su propio restaurante, especial para carnes y viceras."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k res.)",
+      "price": "35-60€",
+      "desc": "Es uno de los restaurantes japoneses más destacados de Barcelona, bien valorado por su sushi, sashimi y cocina japonesa tradicional y creativa."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k res.)",
+      "price": "100-120€",
+      "desc": "Es un restaurante japonés especializado en sumibiyaki —una barbacoa tradicional japonesa con carbón vegetal donde cada mesa tiene su propia parrilla y tú cocinas tu comida en ella— 🥩🔥. Fue el primero de Europa en introducir este concepto y se inspira en un local clásico de Kioto."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k res.)",
+      "price": "35-60€",
+      "desc": "Es un restaurante japonés moderno que combina sushi tradicional con la técnica de robata (la parrilla japonesa a la brasa de carbón), creando una carta que fusiona sabores clásicos japoneses con toques mediterráneos e internacionales."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k res.)",
+      "price": "80-100€",
+      "desc": "El proyecto está liderado por Enric Buendía, un chef catalán formado en restaurantes de alta cocina como Mugaritz y Disfrutar — este último considerado uno de los mejores del mundo."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k res.)",
+      "price": ">100€",
+      "desc": "Restaurante de alta gastronomía en Barcelona, con 3 estrellas Michelin y considerado uno de los mejores del mundo por The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k res.)",
+      "price": "10-30€",
+      "desc": "Coctelería legendaria de Barcelona con entrada \"secreta\" tras una nevera, World's 50 Best Bars Top-10, experiencia sensorial y cócteles artísticos que reinventan la mixología."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k res.)",
+      "price": "10-30€",
+      "desc": "Coctelería de autor reconocida internacionalmente, elegante y con propuestas creativas."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k res.)",
+      "price": "40-80€",
+      "desc": "Restaurante + coctelería con estilo sofisticado, ambiente nocturno y cocina de mercado."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k res.)",
+      "price": "25-45€",
+      "desc": "Clásico de cocina vasca en Barcelona con pintxos, carnes y tradición gastronómica."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k res.)",
+      "price": ">100€",
+      "desc": "Cocina mexicana contemporánea con toque creativo y platos de alta calidad."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k res.)",
+      "price": "20-30€",
+      "desc": "Una de las pizzas artesanales más valoradas de Barcelona, masa fermentada y ingredientes auténticos."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k res.)",
+      "price": "25-40€",
+      "desc": "El restaurante más antiguo de Barcelona (desde 1786), tradición y clásicos catalanes."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k res.)",
+      "price": "40-70€",
+      "desc": "Cocina catalana evolucionada en un entorno elegante con legado histórico."
+    }
   ],
-  en: [
-    { name: "7 Portes", style: "Historic Rice Dishes", rating: "4.2 (16k rev.)", price: "50-70€", desc: "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer." },
-    { name: "Botafumeiro", style: "Galician Seafood", rating: "4.4 (7k rev.)", price: "80-150€", desc: "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)." },
-    { name: "Cal Pep", style: "Market Tapas", rating: "4.4 (1.8k rev.)", price: "50-70€", desc: "Top 50 Best Discovery. Globally cited as the perfect tapas bar." },
-    { name: "El Xampanyet", style: "Tavern / Tapas", rating: "4.7 (5.8k rev.)", price: "25-35€", desc: "Born icon. Famous for its anchovies and own sparkling wine." },
-    { name: "Ciudad Condal", style: "Classic Tapas", rating: "4.6 (18k rev.)", price: "30-45€", desc: "King of reviews. Probably the most popular tapas bar among tourists and locals." },
-    { name: "Tapeo", style: "Modern Tapas", rating: "4.5 (3k rev.)", price: "35-50€", desc: "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)." },
-    { name: "Mantequerías Pirenaicas", style: "Tortillas / Breakfast", rating: "4.4 (1.2k rev.)", price: "15-25€", desc: "Viral Fame: Considered by many the best potato omelette in BCN (with onion)." },
-    { name: "La Tortilla Castiza", style: "Tortillas", rating: "4.8 (300 rev.)", price: "15-20€", desc: "Specialists in Madrid-style omelette (runny). Nearly perfect score." },
-    { name: "Senyor Vermut", style: "Vermouth Bar", rating: "4.5 (1.5k rev.)", price: "20-30€", desc: "Famous for having some of the best Bravas in the city (very spicy)." },
-    { name: "Bormuth", style: "Tapas / Vermouth", rating: "4.3 (3.5k rev.)", price: "20-30€", desc: "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth." },
-    { name: "Rest. Gallego Can Lampazas", style: "Galician", rating: "4.4 (500 rev.)", price: "40-55€", desc: "Pulpo a feira and Galician meats. Classic for business lunches." },
-    { name: "Telefèric Restaurant", style: "Pintxos / Tapas", rating: "4.4 (2k rev.)", price: "30-45€", desc: "San Sebastián style. Very popular for its pintxos cart and visual presentation." },
-    { name: "La Bonaigua", style: "Catalan / Grill", rating: "4.2 (1k rev.)", price: "20-30€", desc: "Honest neighborhood home cooking, no pretensions. Hearty lunch menu." },
-    { name: "Casa Petra", style: "Mediterranean", rating: "4.3 (500 rev.)", price: "30-40€", desc: "Cozy and versatile spot, good value for money in uptown area." },
-    { name: "Dos Pebrots", style: "Historic / R&D", rating: "4.6 (1.2k rev.)", price: "60-80€", desc: "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt." },
-    { name: "Restaurante Coure", style: "Bistronomy", rating: "4.6 (1.1k rev.)", price: "45-60€", desc: "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years." },
-    { name: "La Taverna del Clínic", style: "Gourmet Tapas", rating: "4.5 (1.7k rev.)", price: "60-80€", desc: "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar." },
-    { name: "Restaurante Sintonia", style: "Author / Grill", rating: "4.6 (500 rev.)", price: "40-60€", desc: "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar." },
-    { name: "Restaurante Informal", style: "Catalan Haute Cuisine", rating: "4.5 (400 rev.)", price: "50-70€", desc: "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel." },
-    { name: "Rua Taverna", style: "Gastro-bar", rating: "4.7 (300 rev.)", price: "35-50€", desc: "Hidden gem in Gràcia. Extremely high creativity in tapa format." },
-    { name: "Suca'l Rosselló", style: "Mediterranean", rating: "4.4 (300 rev.)", price: "30-45€", desc: "Well-executed market cuisine, ideal for quiet dinners." },
-    { name: "Sartoria Panatieri", style: "Organic Pizza", rating: "4.4 (2.3k rev.)", price: "30-45€", desc: "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats." },
-    { name: "Xemei", style: "Venetian", rating: "4.1 (1.8k rev.)", price: "40-60€", desc: "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)." },
-    { name: "Murivecchi", style: "Neapolitan", rating: "4.4 (1.5k rev.)", price: "25-35€", desc: "Classic near Born. Very reliable wood-fired Neapolitan pizza." },
-    { name: "Le Cucine Mandarosso", style: "Homestyle Italian", rating: "4.4 (1.2k rev.)", price: "25-35€", desc: "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere." },
-    { name: "Ostaia", style: "Ligurian / Genoese", rating: "4.5 (200 rev.)", price: "30-40€", desc: "Specialists in authentic Genoese Pesto and fresh Ligurian pasta." },
-    { name: "L'osteria del Contadino", style: "Italian", rating: "4.4 (400 rev.)", price: "25-35€", desc: "Small, romantic and colorful. Very visual pasta dishes." },
-    { name: "Rest. Don Corleone", style: "Trattoria", rating: "3.8 (variable)", price: "20-30€", desc: "More focused on tourist/casual profile." },
-    { name: "Bella Italia", style: "Pizzeria", rating: "4.5 (1.5k rev.)", price: "20-30€", desc: "Popular and accessible Neapolitan pizza." },
-    { name: "Oaxaca Cuina Mexicana", style: "Traditional / Mezcal", rating: "4.3 (1.5k rev.)", price: "45-60€", desc: "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe." },
-    { name: "Xuba Tacos", style: "Chef Tacos", rating: "4.6 (900 rev.)", price: "15-25€", desc: "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh." },
-    { name: "El Pachuco", style: "Street Food", rating: "4.6 (2.5k rev.)", price: "15-20€", desc: "Famous Nachos. Always a queue. Rowdy and loud atmosphere." },
-    { name: "La Cocina de Graciela", style: "Homestyle", rating: "4.5 (800 rev.)", price: "20-30€", desc: "Authentic Mexican home flavor. Outstanding cochinita pibil." },
-    { name: "El Rincón Maya", style: "Yucatecan", rating: "4.6 (600 rev.)", price: "20-30€", desc: "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere." },
-    { name: "La Güerita Mexicana", style: "Taqueria", rating: "4.4 (variable)", price: "20-30€", desc: "Well-executed tacos and festive atmosphere." },
-    { name: "San Taco", style: "Tacos", rating: "4.5 (variable)", price: "15-25€", desc: "Solid option for taco cravings." },
-    { name: "Chamako", style: "Tex-Mex / Party", rating: "4.2 (800 rev.)", price: "20-30€", desc: "Tacos and cocktails. Atmosphere very focused on groups and fun." },
-    { name: "Rosa Negra", style: "Commercial Mexican", rating: "4.2 (5k rev.)", price: "20-25€", desc: "Very cheap and loud. Famous for budget mojitos and margaritas." },
-    { name: "Azul Frida", style: "Mexican", rating: "4.1 (variable)", price: "20-30€", desc: "Inspired by Frida Kahlo, decent cuisine." },
-    { name: "Fat Veggies", style: "Smoked / Veggie", rating: "4.6 (500 rev.)", price: "30-40€", desc: "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian." },
-    { name: "Restaurante Martínez", style: "Rice / Grills", rating: "4.2 (4k rev.)", price: "50-65€", desc: "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views." },
-    { name: "La Real Hamburguesería", style: "Gourmet Burgers", rating: "4.5 (1.5k rev.)", price: "15-25€", desc: "Winners of several local burger competitions. Classic American style." },
-    { name: "Bar Torpedo", style: "Gourmet Sandwiches", rating: "4.4 (800 rev.)", price: "20-30€", desc: "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks." },
-    { name: "El Raconet Charrua", style: "Uruguayan", rating: "4.6 (500 rev.)", price: "25-40€", desc: "Uruguayan grilled meat and chivitos. Very authentic." },
-    { name: "The Box", style: "Hot Dogs / Rum", rating: "4.7 (800 rev.)", price: "15-25€", desc: "Homemade sausages and their own infused rums. Small and fun." },
-    { name: "Oriol Balaguer", style: "Pastry", rating: "4.4 (variable)", price: "5-15€", desc: "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs." },
-    { name: "Paral·lelo", style: "Ice Cream", rating: "4.7 (1k rev.)", price: "4-10€", desc: "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors." },
-    { name: "Zenith", style: "Brunch", rating: "4.5 (3k rev.)", price: "15-25€", desc: "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue." },
-    { name: "Honest Greens", style: "Healthy", rating: "4.5 (variable)", price: "15-20€", desc: "\"Real\" food chain, fast and healthy. Very trendy right now." },
-    { name: "LOT Roasters", style: "Café / Brunch", rating: "4.7 (300 rev.)", price: "10-20€", desc: "Roast their own coffee. Very high barista quality." },
-    { name: "Churrería Manchega", style: "Churros", rating: "4.4 (variable)", price: "5-10€", desc: "Classic for chocolate with churros." },
-    { name: "La Caravana", style: "Syrian Kebab", rating: "4.6 (1k rev.)", price: "10-15€", desc: "Not a normal kebab. Properly marinated meat and homemade sauces." },
-    { name: "Observatorio Fabra", style: "\"Dinner with Stars\"", rating: "4.6 (1.5k rev.)", price: "80-100€", desc: "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN." },
-    { name: "Mirablau", style: "Bar / Views", rating: "4.2 (3.5k rev.)", price: "15-30€", desc: "At the end of Tibidabo. Go for the panoramic city views." },
-    { name: "Restaurante Mirabé", style: "Mediterranean", rating: "4.0 (1.5k rev.)", price: "40-50€", desc: "Next to Mirablau, more focused on sit-down dinner with views." },
-    { name: "Prineu en boca Barcelona", style: "Mediterranean", rating: "4.6 (1.4k rev.)", price: "20-30€", desc: "It's a butcher shop with their own restaurant, special for meats and offal." },
-    { name: "Restaurante Shunka", style: "Japanese Restaurant", rating: "4.6 (2.4k rev.)", price: "35-60€", desc: "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine." },
-    { name: "Carlota Akaneya", style: "Japanese Restaurant", rating: "4.7 (3.4k rev.)", price: "100-120€", desc: "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue." },
-    { name: "Robata | Restaurante Japonés Barcelona", style: "Japanese Restaurant", rating: "4.5 (8.2k rev.)", price: "35-60€", desc: "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches." },
-    { name: "Kamikaze", style: "Fine Dining Restaurant", rating: "4.3 (0.5k rev.)", price: "80-100€", desc: "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world." },
-    { name: "Disfrutar", style: "Fine Dining Restaurant", rating: "4.8 (4k rev.)", price: ">100€", desc: "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants." },
-    { name: "Paradiso", style: "Cocktails", rating: "4.3 (7k rev.)", price: "10-30€", desc: "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology." },
-    { name: "Sips", style: "Cocktails", rating: "4.0 (1.6k rev.)", price: "10-30€", desc: "Internationally recognized signature cocktail bar, elegant with creative proposals." },
-    { name: "Feroz Barcelona", style: "Night Restaurant", rating: "4.1 (3.3k rev.)", price: "40-80€", desc: "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine." },
-    { name: "Sagardi", style: "Author / Grill", rating: "4.4 (4k rev.)", price: "25-45€", desc: "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition." },
-    { name: "Come by Paco Méndez", style: "Mexican", rating: "4.5 (0.7k rev.)", price: ">100€", desc: "Contemporary Mexican cuisine with creative touch and high-quality dishes." },
-    { name: "Parking Pizza", style: "Pizzas", rating: "4.4 (8k rev.)", price: "20-30€", desc: "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients." },
-    { name: "Can Culleretes", style: "Catalan", rating: "4.3 (6.6k rev.)", price: "25-40€", desc: "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics." },
-    { name: "Casa Leopoldo", style: "Catalan", rating: "4.7 (0.7k rev.)", price: "40-70€", desc: "Evolved Catalan cuisine in an elegant setting with historic legacy." }
+  "en": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
+  ],
+  "zh": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
+  ],
+  "hi": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
+  ],
+  "fr": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
+  ],
+  "ar": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
+  ],
+  "ru": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
+  ],
+  "pt": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
+  ],
+  "ja": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
+  ],
+  "de": [
+    {
+      "name": "7 Portes",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (16k rev.)",
+      "price": "50-70€",
+      "desc": "Founded in 1836. Famous for the \"Paella Parellada\". Picasso was a customer."
+    },
+    {
+      "name": "Botafumeiro",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (7k rev.)",
+      "price": "80-150€",
+      "desc": "Seafood institution. Visited by presidents and celebrities (Woody Allen, Beyoncé)."
+    },
+    {
+      "name": "Cal Pep",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (1.8k rev.)",
+      "price": "50-70€",
+      "desc": "Top 50 Best Discovery. Globally cited as the perfect tapas bar."
+    },
+    {
+      "name": "El Xampanyet",
+      "style": "Tapas & Pinchos",
+      "rating": "4.7 (5.8k rev.)",
+      "price": "25-35€",
+      "desc": "Born icon. Famous for its anchovies and own sparkling wine."
+    },
+    {
+      "name": "Ciudad Condal",
+      "style": "Tapas & Pinchos",
+      "rating": "4.6 (18k rev.)",
+      "price": "30-45€",
+      "desc": "King of reviews. Probably the most popular tapas bar among tourists and locals."
+    },
+    {
+      "name": "Tapeo",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (3k rev.)",
+      "price": "35-50€",
+      "desc": "Led by Daniel Rueda. Traditional tapas with haute cuisine technique (e.g. Honey ribs)."
+    },
+    {
+      "name": "Mantequerías Pirenaicas",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "15-25€",
+      "desc": "Viral Fame: Considered by many the best potato omelette in BCN (with onion)."
+    },
+    {
+      "name": "La Tortilla Castiza",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.8 (300 rev.)",
+      "price": "15-20€",
+      "desc": "Specialists in Madrid-style omelette (runny). Nearly perfect score."
+    },
+    {
+      "name": "Senyor Vermut",
+      "style": "Bares & Coctelerías",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Famous for having some of the best Bravas in the city (very spicy)."
+    },
+    {
+      "name": "Bormuth",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (3.5k rev.)",
+      "price": "20-30€",
+      "desc": "Young atmosphere in Born. Ideal for quick tapas and artisan vermouth."
+    },
+    {
+      "name": "Rest. Gallego Can Lampazas",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (500 rev.)",
+      "price": "40-55€",
+      "desc": "Pulpo a feira and Galician meats. Classic for business lunches."
+    },
+    {
+      "name": "Telefèric Restaurant",
+      "style": "Tapas & Pinchos",
+      "rating": "4.4 (2k rev.)",
+      "price": "30-45€",
+      "desc": "San Sebastián style. Very popular for its pintxos cart and visual presentation."
+    },
+    {
+      "name": "La Bonaigua",
+      "style": "Mediterránea & Local",
+      "rating": "4.2 (1k rev.)",
+      "price": "20-30€",
+      "desc": "Honest neighborhood home cooking, no pretensions. Hearty lunch menu."
+    },
+    {
+      "name": "Casa Petra",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (500 rev.)",
+      "price": "30-40€",
+      "desc": "Cozy and versatile spot, good value for money in uptown area."
+    },
+    {
+      "name": "Dos Pebrots",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.2k rev.)",
+      "price": "60-80€",
+      "desc": "Top 20 World (Food & Wine). Former elBulli chefs. Recover recipes from ancient Rome and Egypt."
+    },
+    {
+      "name": "Restaurante Coure",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (1.1k rev.)",
+      "price": "45-60€",
+      "desc": "Bib Gourmand Michelin. Famous for its croquette, considered BCN's best for years."
+    },
+    {
+      "name": "La Taverna del Clínic",
+      "style": "Tapas & Pinchos",
+      "rating": "4.5 (1.7k rev.)",
+      "price": "60-80€",
+      "desc": "Michelin Guide. Handle luxury products (Caviar, Truffle) in informal format. Award-winning cellar."
+    },
+    {
+      "name": "Restaurante Sintonia",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "40-60€",
+      "desc": "Elegant speakeasy atmosphere. Famous for its \"Smoked Croissant\" and steak tartar."
+    },
+    {
+      "name": "Restaurante Informal",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.5 (400 rev.)",
+      "price": "50-70€",
+      "desc": "Led by Marc Gascons (1 Michelin Star). Refined Catalan cuisine in luxury hotel."
+    },
+    {
+      "name": "Rua Taverna",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.7 (300 rev.)",
+      "price": "35-50€",
+      "desc": "Hidden gem in Gràcia. Extremely high creativity in tapa format."
+    },
+    {
+      "name": "Suca'l Rosselló",
+      "style": "Mediterránea & Local",
+      "rating": "4.4 (300 rev.)",
+      "price": "30-45€",
+      "desc": "Well-executed market cuisine, ideal for quiet dinners."
+    },
+    {
+      "name": "Sartoria Panatieri",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (2.3k rev.)",
+      "price": "30-45€",
+      "desc": "Best Pizzeria in Europe 2023 and Top 3 Worldwide. They make their own cured meats."
+    },
+    {
+      "name": "Xemei",
+      "style": "Italiana & Pizza",
+      "rating": "4.1 (1.8k rev.)",
+      "price": "40-60€",
+      "desc": "Cult. The Colombo twins. Anthony Bourdain visited and loved it. Venetian cuisine (not typical pasta/pizza)."
+    },
+    {
+      "name": "Murivecchi",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.5k rev.)",
+      "price": "25-35€",
+      "desc": "Classic near Born. Very reliable wood-fired Neapolitan pizza."
+    },
+    {
+      "name": "Le Cucine Mandarosso",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (1.2k rev.)",
+      "price": "25-35€",
+      "desc": "Near Palau de la Música. Famous for its fresh pasta and intimate atmosphere."
+    },
+    {
+      "name": "Ostaia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (200 rev.)",
+      "price": "30-40€",
+      "desc": "Specialists in authentic Genoese Pesto and fresh Ligurian pasta."
+    },
+    {
+      "name": "L'osteria del Contadino",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (400 rev.)",
+      "price": "25-35€",
+      "desc": "Small, romantic and colorful. Very visual pasta dishes."
+    },
+    {
+      "name": "Rest. Don Corleone",
+      "style": "Italiana & Pizza",
+      "rating": "3.8 (variable)",
+      "price": "20-30€",
+      "desc": "More focused on tourist/casual profile."
+    },
+    {
+      "name": "Bella Italia",
+      "style": "Italiana & Pizza",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "20-30€",
+      "desc": "Popular and accessible Neapolitan pizza."
+    },
+    {
+      "name": "Oaxaca Cuina Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.3 (1.5k rev.)",
+      "price": "45-60€",
+      "desc": "Michelin Recommended. Ancestral cuisine. Has one of the largest Mezcal collections in Europe."
+    },
+    {
+      "name": "Xuba Tacos",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (900 rev.)",
+      "price": "15-25€",
+      "desc": "Created by 2 Michelin Star chef (Antonio Sáez). Blue corn tortillas made fresh."
+    },
+    {
+      "name": "El Pachuco",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (2.5k rev.)",
+      "price": "15-20€",
+      "desc": "Famous Nachos. Always a queue. Rowdy and loud atmosphere."
+    },
+    {
+      "name": "La Cocina de Graciela",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Authentic Mexican home flavor. Outstanding cochinita pibil."
+    },
+    {
+      "name": "El Rincón Maya",
+      "style": "Mexicana & Latina",
+      "rating": "4.6 (600 rev.)",
+      "price": "20-30€",
+      "desc": "Specialists in Yucatan cuisine. Family-friendly and colorful atmosphere."
+    },
+    {
+      "name": "La Güerita Mexicana",
+      "style": "Mexicana & Latina",
+      "rating": "4.4 (variable)",
+      "price": "20-30€",
+      "desc": "Well-executed tacos and festive atmosphere."
+    },
+    {
+      "name": "San Taco",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (variable)",
+      "price": "15-25€",
+      "desc": "Solid option for taco cravings."
+    },
+    {
+      "name": "Chamako",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (800 rev.)",
+      "price": "20-30€",
+      "desc": "Tacos and cocktails. Atmosphere very focused on groups and fun."
+    },
+    {
+      "name": "Rosa Negra",
+      "style": "Mexicana & Latina",
+      "rating": "4.2 (5k rev.)",
+      "price": "20-25€",
+      "desc": "Very cheap and loud. Famous for budget mojitos and margaritas."
+    },
+    {
+      "name": "Azul Frida",
+      "style": "Mexicana & Latina",
+      "rating": "4.1 (variable)",
+      "price": "20-30€",
+      "desc": "Inspired by Frida Kahlo, decent cuisine."
+    },
+    {
+      "name": "Fat Veggies",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.6 (500 rev.)",
+      "price": "30-40€",
+      "desc": "From the creators of Fat Barbies. Everything smoked/grilled. Surprising even if you're not vegetarian."
+    },
+    {
+      "name": "Restaurante Martínez",
+      "style": "Carnes & Brasas",
+      "rating": "4.2 (4k rev.)",
+      "price": "50-65€",
+      "desc": "The Views. Located in Montjuïc. Rice dishes and steaks with harbor views."
+    },
+    {
+      "name": "La Real Hamburguesería",
+      "style": "Burgers & Street Food",
+      "rating": "4.5 (1.5k rev.)",
+      "price": "15-25€",
+      "desc": "Winners of several local burger competitions. Classic American style."
+    },
+    {
+      "name": "Bar Torpedo",
+      "style": "Burgers & Street Food",
+      "rating": "4.4 (800 rev.)",
+      "price": "20-30€",
+      "desc": "From the chef of Bar Mut. Michelin-star level sandwiches, rock & roll and drinks."
+    },
+    {
+      "name": "El Raconet Charrua",
+      "style": "Carnes & Brasas",
+      "rating": "4.6 (500 rev.)",
+      "price": "25-40€",
+      "desc": "Uruguayan grilled meat and chivitos. Very authentic."
+    },
+    {
+      "name": "The Box",
+      "style": "Burgers & Street Food",
+      "rating": "4.7 (800 rev.)",
+      "price": "15-25€",
+      "desc": "Homemade sausages and their own infused rums. Small and fun."
+    },
+    {
+      "name": "Oriol Balaguer",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-15€",
+      "desc": "Best Croissant in Spain (2014) and Best Panettone. One of the world's best pastry chefs."
+    },
+    {
+      "name": "Paral·lelo",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (1k rev.)",
+      "price": "4-10€",
+      "desc": "Awards for best ice cream. Make everything from scratch (even roast their pistachios). Very creative flavors."
+    },
+    {
+      "name": "Zenith",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (3k rev.)",
+      "price": "15-25€",
+      "desc": "\"All day brunch\". Very Instagrammable. Pancakes and eggs benedict. Usually a queue."
+    },
+    {
+      "name": "Honest Greens",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.5 (variable)",
+      "price": "15-20€",
+      "desc": "\"Real\" food chain, fast and healthy. Very trendy right now."
+    },
+    {
+      "name": "LOT Roasters",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.7 (300 rev.)",
+      "price": "10-20€",
+      "desc": "Roast their own coffee. Very high barista quality."
+    },
+    {
+      "name": "Churrería Manchega",
+      "style": "Desayunos, Cafés & Dulces",
+      "rating": "4.4 (variable)",
+      "price": "5-10€",
+      "desc": "Classic for chocolate with churros."
+    },
+    {
+      "name": "La Caravana",
+      "style": "Burgers & Street Food",
+      "rating": "4.6 (1k rev.)",
+      "price": "10-15€",
+      "desc": "Not a normal kebab. Properly marinated meat and homemade sauces."
+    },
+    {
+      "name": "Observatorio Fabra",
+      "style": "Bares & Coctelerías",
+      "rating": "4.6 (1.5k rev.)",
+      "price": "80-100€",
+      "desc": "Unique Experience. Summer outdoor dinners at the astronomical observatory with views of all BCN."
+    },
+    {
+      "name": "Mirablau",
+      "style": "Bares & Coctelerías",
+      "rating": "4.2 (3.5k rev.)",
+      "price": "15-30€",
+      "desc": "At the end of Tibidabo. Go for the panoramic city views."
+    },
+    {
+      "name": "Restaurante Mirabé",
+      "style": "Mediterránea & Local",
+      "rating": "4.0 (1.5k rev.)",
+      "price": "40-50€",
+      "desc": "Next to Mirablau, more focused on sit-down dinner with views."
+    },
+    {
+      "name": "Prineu en boca Barcelona",
+      "style": "Mediterránea & Local",
+      "rating": "4.6 (1.4k rev.)",
+      "price": "20-30€",
+      "desc": "It's a butcher shop with their own restaurant, special for meats and offal."
+    },
+    {
+      "name": "Restaurante Shunka",
+      "style": "Asiática & Sushi",
+      "rating": "4.6 (2.4k rev.)",
+      "price": "35-60€",
+      "desc": "One of Barcelona's most outstanding Japanese restaurants, highly rated for its sushi, sashimi and traditional and creative Japanese cuisine."
+    },
+    {
+      "name": "Carlota Akaneya",
+      "style": "Asiática & Sushi",
+      "rating": "4.7 (3.4k rev.)",
+      "price": "100-120€",
+      "desc": "A Japanese restaurant specializing in sumibiyaki—a traditional Japanese charcoal barbecue where each table has its own grill and you cook your food on it—🥩🔥. It was the first in Europe to introduce this concept and is inspired by a classic Kyoto venue."
+    },
+    {
+      "name": "Robata | Restaurante Japonés Barcelona",
+      "style": "Asiática & Sushi",
+      "rating": "4.5 (8.2k rev.)",
+      "price": "35-60€",
+      "desc": "A modern Japanese restaurant that combines traditional sushi with the robata technique (Japanese charcoal grill), creating a menu that fuses classic Japanese flavors with Mediterranean and international touches."
+    },
+    {
+      "name": "Kamikaze",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.3 (0.5k rev.)",
+      "price": "80-100€",
+      "desc": "The project is led by Enric Buendía, a Catalan chef trained in fine dining restaurants like Mugaritz and Disfrutar—the latter considered one of the best in the world."
+    },
+    {
+      "name": "Disfrutar",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.8 (4k rev.)",
+      "price": ">100€",
+      "desc": "Fine dining restaurant in Barcelona, with 3 Michelin stars and considered one of the best in the world by The World's 50 Best Restaurants."
+    },
+    {
+      "name": "Paradiso",
+      "style": "Bares & Coctelerías",
+      "rating": "4.3 (7k rev.)",
+      "price": "10-30€",
+      "desc": "Legendary Barcelona cocktail bar with \"secret\" entrance behind a fridge, World's 50 Best Bars Top-10, sensory experience and artistic cocktails that reinvent mixology."
+    },
+    {
+      "name": "Sips",
+      "style": "Bares & Coctelerías",
+      "rating": "4.0 (1.6k rev.)",
+      "price": "10-30€",
+      "desc": "Internationally recognized signature cocktail bar, elegant with creative proposals."
+    },
+    {
+      "name": "Feroz Barcelona",
+      "style": "Bares & Coctelerías",
+      "rating": "4.1 (3.3k rev.)",
+      "price": "40-80€",
+      "desc": "Restaurant + cocktail bar with sophisticated style, nighttime atmosphere and market cuisine."
+    },
+    {
+      "name": "Sagardi",
+      "style": "Alta Cocina & Autor",
+      "rating": "4.4 (4k rev.)",
+      "price": "25-45€",
+      "desc": "Classic Basque cuisine in Barcelona with pintxos, meats and gastronomic tradition."
+    },
+    {
+      "name": "Come by Paco Méndez",
+      "style": "Mexicana & Latina",
+      "rating": "4.5 (0.7k rev.)",
+      "price": ">100€",
+      "desc": "Contemporary Mexican cuisine with creative touch and high-quality dishes."
+    },
+    {
+      "name": "Parking Pizza",
+      "style": "Italiana & Pizza",
+      "rating": "4.4 (8k rev.)",
+      "price": "20-30€",
+      "desc": "One of Barcelona's most highly rated artisan pizzas, fermented dough and authentic ingredients."
+    },
+    {
+      "name": "Can Culleretes",
+      "style": "Mediterránea & Local",
+      "rating": "4.3 (6.6k rev.)",
+      "price": "25-40€",
+      "desc": "Barcelona's oldest restaurant (since 1786), tradition and Catalan classics."
+    },
+    {
+      "name": "Casa Leopoldo",
+      "style": "Mediterránea & Local",
+      "rating": "4.7 (0.7k rev.)",
+      "price": "40-70€",
+      "desc": "Evolved Catalan cuisine in an elegant setting with historic legacy."
+    }
   ]
 };
